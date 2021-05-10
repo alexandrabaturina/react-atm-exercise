@@ -9,16 +9,16 @@ const ATMDeposit = ({ onChange }) => {
 };
 
 const Account = () => {
-    let transactionState = 0;
+    let deposit = 0;
     const [totalState, setTotalState] = React.useState(0);
     let status = `Acount balance $ ${totalState}`
 
     const handleChange = event => {
-        transactionState = Number(event.target.value);
+        deposit = Number(event.target.value);
     };
 
     const handleSubmit = (event) => {
-        setTotalState(totalState + transactionState);
+        setTotalState(totalState + deposit);
         event.preventDefault()
     }
 
