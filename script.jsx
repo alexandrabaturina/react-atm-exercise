@@ -46,9 +46,9 @@ const Account = () => {
                 <option id="deposit-selection" value="Deposit">Deposit</option>
                 <option id="cashback-selection" value="Cash Back">Cash Back</option>
             </select>
-            <ATMDeposit
+            {atmMode && <ATMDeposit
                 onChange={handleChange}
-                isDeposit={isDeposit} />
+                isDeposit={isDeposit} />}
         </form>
     );
 };
