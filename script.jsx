@@ -3,8 +3,8 @@ const ATMDeposit = ({ onChange, isDeposit, isValid }) => {
         <label className="label huge">
             <h3>{isDeposit ? "Deposit" : "Cash Back"}</h3>
             Deposit:
-            <input type="number" onChange={onChange}></input>
-            <input type="submit" disabled={!isValid}></input>
+            <input id="number" type="number" onChange={onChange}></input>
+            <input id="submit" type="submit" disabled={!isValid}></input>
         </label>
     );
 };
@@ -53,16 +53,18 @@ const Account = () => {
     return (
         <form onSubmit={handleSubmit}>
             <h2>Account Balance {totalState}</h2>
-            <label>Select an action below to continue</label>
-            <select onChange={(e) => handleModeSelect(e)} name="mode" id="mode-select">
-                <option id="no-selection" value=""></option>
-                <option id="deposit-selection" value="Deposit">Deposit</option>
-                <option id="cashback-selection" value="Cash Back">Cash Back</option>
-            </select>
-            {atmMode && <ATMDeposit
-                onChange={handleChange}
-                isDeposit={isDeposit}
-                isValid={validTransaction} />}
+            <div className="atm-form">
+                <label>Select an action below to continue</label>
+                <select onChange={(e) => handleModeSelect(e)} name="mode" id="mode-select">
+                    <option id="no-selection" value=""></option>
+                    <option id="deposit-selection" value="Deposit">Deposit</option>
+                    <option id="cashback-selection" value="Cash Back">Cash Back</option>
+                </select>
+                {atmMode && <ATMDeposit
+                    onChange={handleChange}
+                    isDeposit={isDeposit}
+                    isValid={validTransaction} />}
+            </div>
         </form>
     );
 };

@@ -1,0 +1,24 @@
+h1,
+#root {
+    margin-left: 30px;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 20px;
+}
+
+.atm-form {
+    display: flex;
+    flex-direction: column;
+}
+
+select#mode-select {
+    width: 200px;
+}
+
+#number,
+#submit {
+    margin-left: 5px;
+}
