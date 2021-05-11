@@ -11,3 +11,8 @@ The exercise has the following goals:
 The following improvements have been made to ***ATM Machine*** app:
 * A multi-choice selection is provided instead of buttons to choose between Deposit/Cash Back modes
 * The **number** input is validated so that the **Submit** button is disabled when you attempt to take out more money than is available in the account
+## Getting Started
+To run ***ATM Machine*** app locally,
+1. Clone this repo.
+2. ```cd``` into project directory.
+3. Run ```standalone.html``` on local server.
